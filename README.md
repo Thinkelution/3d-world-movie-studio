@@ -11,7 +11,27 @@ Everything domain-specific is our own: engine, renderer, world builder, characte
 generator, rigging, animation, camera system and script language. No Blender, Unreal
 or Unity.
 
-> **Status: pre-alpha, planning.** There's no code yet. Development is being built in public.
+> **Status: pre-alpha, milestone M0 (foundations).** Development is being built in public.
+> Today it renders a test scene from a script to MP4, deterministically.
+
+## Try it
+
+Needs [Rust](https://rustup.rs) (stable) and, for MP4 output, [ffmpeg](https://ffmpeg.org) on your PATH.
+
+```bash
+cargo run --release --bin wms -- render examples/hello.scene
+```
+
+This writes `out/hello.mp4` and the PNG frames to `out/hello_frames/`. Run
+`wms check <script>` to validate a script, or `wms frame <script> --at 45 -o f.png`
+for one frame. Add `--software` to render without a GPU.
+
+```bash
+cargo test --workspace
+```
+
+Tests include golden-image checks: the hello scene must render the same on every
+run and stay within tolerance of the reference frames in `tests/golden/`.
 
 ## Read first
 

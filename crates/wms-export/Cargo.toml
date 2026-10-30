@@ -1,0 +1,13 @@
+[package]
+name = "wms-export"
+description = "Frames to files: PNG sequences, video, and image comparison for golden tests"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish.workspace = true
+
+[dependencies]
+png.workspace = true
+thiserror.workspace = true

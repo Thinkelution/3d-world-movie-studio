@@ -1,0 +1,19 @@
+[package]
+name = "wms-resolve"
+description = "Turns a parsed script into what the renderer draws, frame by frame"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish.workspace = true
+
+[dependencies]
+wms-core.workspace = true
+wms-geo.workspace = true
+wms-script.workspace = true
+wms-render.workspace = true
+glam.workspace = true
+
+[dev-dependencies]
+wms-export.workspace = true

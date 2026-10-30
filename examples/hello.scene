@@ -1,0 +1,12 @@
+# hello.scene: the M0 smoke test.
+# A spinning cube on a ground plane, with small boxes scattered from the seed.
+# The real World Script (places, cast, scenes, shots) arrives in M2.
+
+TITLE    Hello cube
+SEED     42
+SIZE     1280x720
+FPS      30
+LENGTH   3s
+COLOR    #E8A33D
+SPIN     120deg/s
+SCATTER  14

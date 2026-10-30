@@ -1,0 +1,40 @@
+[workspace]
+resolver = "3"
+members = [
+    "crates/wms-core",
+    "crates/wms-geo",
+    "crates/wms-script",
+    "crates/wms-render",
+    "crates/wms-resolve",
+    "crates/wms-export",
+    "apps/wms-cli",
+]
+
+[workspace.package]
+version = "0.0.1"
+edition = "2024"
+rust-version = "1.85"
+license = "AGPL-3.0-or-later"
+repository = "https://github.com/Thinkelution/3d-world-movie-studio"
+publish = false
+
+[workspace.dependencies]
+wms-core = { path = "crates/wms-core" }
+wms-geo = { path = "crates/wms-geo" }
+wms-script = { path = "crates/wms-script" }
+wms-render = { path = "crates/wms-render" }
+wms-resolve = { path = "crates/wms-resolve" }
+wms-export = { path = "crates/wms-export" }
+
+wgpu = "30"
+glam = { version = "0.34", features = ["bytemuck"] }
+bytemuck = { version = "1.25", features = ["derive"] }
+pollster = "1"
+png = "0.18"
+clap = { version = "4.6", features = ["derive"] }
+anyhow = "1"
+thiserror = "2"
+
+[profile.dev.package."*"]
+# Dependencies (wgpu, naga) are slow in debug builds; optimise them even in dev.
+opt-level = 2

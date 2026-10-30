@@ -1,0 +1,21 @@
+[package]
+name = "wms-cli"
+description = "The `wms` command: check and render World Script files"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish.workspace = true
+
+[[bin]]
+name = "wms"
+path = "src/main.rs"
+
+[dependencies]
+wms-script.workspace = true
+wms-render.workspace = true
+wms-resolve.workspace = true
+wms-export.workspace = true
+clap.workspace = true
+anyhow.workspace = true
