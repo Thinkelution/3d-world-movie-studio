@@ -1,0 +1,25 @@
+# Rust
+/target/
+**/*.rs.bk
+
+# Render output
+/out/
+*.mp4
+*.mov
+!assets/**/*.mp4
+
+# Secrets: provider keys come from environment variables only
+.env
+.env.*
+*.pem
+*.key
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Python research
+__pycache__/
+.venv/
